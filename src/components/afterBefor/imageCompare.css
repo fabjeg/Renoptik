@@ -1,0 +1,27 @@
+.container_compare{
+    margin-top: 10%;
+    margin-inline: 10%;
+}
+.container_compare h3{
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+.container_compare_picture{
+    display: flex;
+    padding-left: 5%;
+}
+.container_compare_map{
+    margin-bottom: 30px;
+    display: flex;
+}
+.picture4 {
+    height: 130% !important; 
+}
+@media(max-width: 900px) {
+    .container_compare_picture{
+        flex-direction: column;
+    }
+    .container_compare_map{
+        justify-content: center;
+    }
+}
