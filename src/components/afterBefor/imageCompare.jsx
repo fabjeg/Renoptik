@@ -9,10 +9,9 @@ import picture6 from '../../assets/imageCompareNeuf(5).JPG'
 import picture7 from '../../assets/imageCompareVieux(6).JPG'
 import picture8 from '../../assets/imageCompareNeuf(7).JPG'
 
-// Fonction pour extraire le nom du fichier d'une image (sans son chemin)
 const getFileName = (src) => {
   const parts = src.split('/');
-  return parts[parts.length - 1]; // Retourne le dernier élément du tableau (le nom du fichier)
+  return parts[parts.length - 1]; 
 };
 
 export function PictureComparison() {
