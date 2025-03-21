@@ -7,7 +7,7 @@ import picture4 from '../../assets/imageCompareNeuf(2).JPG';
 import picture5 from '../../assets/imageCompareVieux(4).JPG'
 import picture6 from '../../assets/imageCompareNeuf(5).JPG'
 import picture7 from '../../assets/picture/picture.jpg'
-import picture8 from '../../assets/imageCompareNeuf(7).JPG'
+import picture8 from '../../assets/picture/imageCompareNeuf(7).jpg'
 
 const getFileName = (src) => {
   const parts = src.split('/');
