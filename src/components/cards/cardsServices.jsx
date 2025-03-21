@@ -88,7 +88,7 @@ const StyledWrapper = styled.div`
     text-align: center;
     gap: 10px;
     background: #e7dcca;
-    color: #fff;
+    color: black;
     line-height: 1.5;
     border-radius: 5px;
     pointer-events: none;
