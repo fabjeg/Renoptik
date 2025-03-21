@@ -7,10 +7,10 @@ import svg3 from "../../assets/logo_svg/road_icon_198842.png";
 
 export function Card() {
   const services = [
-    { logo: svg1, title: "Rénovation de phares", content: "Redonnez vie à vos phares grâce à notre expertise en restauration et en optimisation." },
+    { logo: svg1, title: "Rénovation de phares", content: "Redonnez éclat et performance à vos phares grâce à notre expertise en restauration et en optimisation." },
     { logo: svg3, title: "Amélioration de la visibilité", content: "Augmentez votre sécurité sur la route avec des phares parfaitement rénovés." },
     { logo: svg, title: "Esthétique personnalisée", content: "Ajoutez une touche unique à votre véhicule avec nos designs sur mesure." },
-    { logo: svg2, title: "Durabilité garantie", content: "Nos solutions sont conçues pour durer, offrant une performance optimale sur le long terme." },
+    { logo: svg2, title: "Durabilité garantie", content: "Nos solutions sont pensées pour durer et garantir une performance optimale sur le long terme" },
   ];
 
   return (

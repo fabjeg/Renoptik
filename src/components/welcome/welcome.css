@@ -47,4 +47,8 @@
         flex-direction: column-reverse;
         align-items: center;
     }
+    .container_welcome-picture{
+        margin-bottom: 10%;
+        width: 100%;
+    }
 }
