@@ -1,54 +1,75 @@
-.container_welcome{
-    display: flex;
-    margin-inline: 10%;
-    margin-top: 10%;
-    margin-bottom: 19%;
-    gap: 2%;
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+.container_welcome {
+  display: flex;
+  margin-inline: 10%;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  gap: 2%;
 }
-.container_welcome_description{
-    width: 100%;
-    overflow: hidden;
-    animation: fadeIn 1s ease-in-out;
+.background-title {
+  background: center/cover url(../../assets/car.jpg) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.container_welcome_description h1{
-    font-size: 50px;
-    margin-bottom: 5%;
+
+.container_welcome_description {
+  animation: fadeIn 1s ease-in-out;
 }
-.container_welcome_description strong{
-    font-size: 30px;
+.container_welcome_description h1 {
+  font-size: clamp(1rem, 4rem, 10rem);
+  margin-bottom: 5%;
+  font-family: "Poetsen One", sans-serif;
 }
-.container_welcome_description p{
-    margin: 5% 0 5% 0;
-    font-size: 20px;
+.container_welcome_description strong {
+  font-size: 30px;
 }
-.container_welcome-picture{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container_welcome_description p {
+  margin: 5% 0 5% 0;
+  font-size: 20px;
 }
-.container_welcome-picture img{
-    width: 100%;
-    border-radius: 3rem;
+.container_welcome-picture {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_welcome-picture img {
+  width: 100%;
+  border-radius: 3rem;
+}
+.container_welcome_logo {
+  width: 100%;
+  margin: 20px 0 20px 30px;
+  display: flex;
+  gap: 30px;
+  font-size: 30px;
+}
+.fa-square-facebook:hover {
+  color: #4267b2;
+}
+
+.fa-instagram:hover {
+  color: #c13584;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-@media(max-width: 1000px){
-    .container_welcome{
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .container_welcome-picture{
-        margin-bottom: 10%;
-        width: 100%;
-    }
+@media (max-width: 1000px) {
+  .container_welcome {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .container_welcome-picture {
+    margin-bottom: 10%;
+    width: 100%;
+  }
 }

@@ -1,16 +1,14 @@
-.container_services{
-    margin-top: 16%;
-    margin-bottom: 17%;
-    background-color:#FFFFE8;
-    padding: 8%;
+.container_services {
+  padding: 8%;
 }
-.container_services h2{
-    margin: 0 0 5% 3%;
-    font-size: 30px;
+.container_services h2 {
+  margin: 0 0 5% 3%;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-@media(max-width: 850px){
-    .container_services h2{
-        margin-bottom: 15%;
-    }
+@media (max-width: 850px) {
+  .container_services h2 {
+    margin-bottom: 15%;
+  }
 }
