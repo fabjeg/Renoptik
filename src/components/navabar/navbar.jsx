@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Link } from "react-router-dom";
 
 export function NavBar() {
   const expand = "xxl";
@@ -33,6 +34,12 @@ export function NavBar() {
               <Nav.Link href="#action1">Accueil</Nav.Link>
               <Nav.Link href="#action2">Nos Services</Nav.Link>
               <Nav.Link href="#action3">Nos Réalisations</Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/infos"
+              >
+                Infos
+              </Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
           </Offcanvas.Body>

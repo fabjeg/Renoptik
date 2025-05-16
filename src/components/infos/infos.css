@@ -1,0 +1,64 @@
+.container-infos {
+  padding: 8% 8% 0 8%;
+}
+.container-infos h2 {
+  margin: 0 0 5% 3%;
+  font-weight: 700;
+}
+.container-infos {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.container-infos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0056b3;
+  text-align: center;
+}
+
+.container-infos h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #0077cc;
+}
+
+.container-infos p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.container-infos ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.container-infos li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container-infos {
+    padding: 1.5rem;
+  }
+
+  .container-infos h2 {
+    font-size: 2rem;
+  }
+
+  .container-infos h3 {
+    font-size: 1.3rem;
+  }
+
+  .container-infos p,
+  .container-infos li {
+    font-size: 1rem;
+  }
+}

@@ -6,6 +6,7 @@ import { PictureComparison } from "./components/afterBefor/imageCompare";
 import { Contact } from "./components/formulaire/contact";
 import { ButtonContact } from "./components/button/button_contact";
 import { Footer } from "./components/footer/footer";
+import { Infos } from "./components/infos/infos";
 
 export {
   NavBar,
@@ -16,4 +17,5 @@ export {
   PictureComparison,
   Contact,
   Footer,
+  Infos,
 };
