@@ -14,32 +14,34 @@ export function Welcome() {
           performances et sublimer leur esthétique.
           <br /> Rénoptik, où la qualité rencontre l'expertise.
         </p>
-        <ButtonContact />
-        <div className="container_welcome_logo">
-          <span
-            className="fa-brands fa-square-facebook"
-            onClick={() =>
-              window.open(
-                "https://www.facebook.com/profile.php?id=61572603442867",
-                "_blank"
-              )
-            }
-            role="button"
-            aria-label="Facebook"
-            tabIndex={0}
-          />
-          <span
-            className="fa-brands fa-instagram"
-            onClick={() =>
-              window.open(
-                "https://www.instagram.com/renoptikrenoptik/",
-                "_blank"
-              )
-            }
-            role="button"
-            aria-label="Instagram"
-            tabIndex={0}
-          />
+        <div className="container_welcome-button-logo">
+          <ButtonContact />
+          <div className="container_welcome_logo">
+            <span
+              className="fa-brands fa-square-facebook"
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/profile.php?id=61572603442867",
+                  "_blank"
+                )
+              }
+              role="button"
+              aria-label="Facebook"
+              tabIndex={0}
+            />
+            <span
+              className="fa-brands fa-instagram"
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/renoptikrenoptik/",
+                  "_blank"
+                )
+              }
+              role="button"
+              aria-label="Instagram"
+              tabIndex={0}
+            />
+          </div>
         </div>
       </div>
       <div className="container_welcome-picture">

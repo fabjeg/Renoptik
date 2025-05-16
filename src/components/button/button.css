@@ -12,6 +12,7 @@ button {
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
+  width: 150px;
 }
 
 button span {

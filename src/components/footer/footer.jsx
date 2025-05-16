@@ -13,7 +13,7 @@ export function Footer() {
           />
           <div>
             <h3>Rénoptik</h3>
-            <p>Rénovation de fenêtres et de portes</p>
+            <p>Rénovation de phares de voiture</p>
           </div>
           <div className="footer_contact">
             <h3>Contact</h3>
