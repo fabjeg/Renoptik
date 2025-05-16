@@ -36,7 +36,7 @@ export function PictureComparison() {
 
   return (
     <div className="container_compare">
-      <h3 id="action3">Nos Réalisations</h3>
+      <h3 id="realisations">Nos Réalisations</h3>
       <div className="container_compare_picture">
         {pictures.map((pict, index) => (
           <div

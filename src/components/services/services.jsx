@@ -5,7 +5,7 @@ import { ScrollComponent } from "../scrollComponent/scrollComponent";
 export function Services() {
   return (
     <div className="container_services">
-      <h2 id="action2">Nos sevices</h2>
+      <h2 id="services">Nos sevices</h2>
       <ScrollComponent>
         <Card />
       </ScrollComponent>

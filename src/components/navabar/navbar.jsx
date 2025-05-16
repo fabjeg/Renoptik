@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
+import { NavScrollLink } from "../NavScrollLink/NavScrollLink";
 
 export function NavBar() {
   const expand = "xxl";
@@ -12,7 +13,7 @@ export function NavBar() {
   return (
     <Navbar
       expand={expand}
-      className=" mb-3"
+      className="mb-3"
     >
       <Container
         fluid
@@ -28,19 +29,36 @@ export function NavBar() {
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="end"
         >
-          <Offcanvas.Header closeButton></Offcanvas.Header>
+          <Offcanvas.Header closeButton />
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#action1">Accueil</Nav.Link>
-              <Nav.Link href="#action2">Nos Services</Nav.Link>
-              <Nav.Link href="#action3">Nos Réalisations</Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/"
+              >
+                Accueil
+              </Nav.Link>
+
+              <Nav.Link as="span">
+                <NavScrollLink to="services">Nos Services</NavScrollLink>
+              </Nav.Link>
+
+              <Nav.Link as="span">
+                <NavScrollLink to="realisations">
+                  Nos Réalisations
+                </NavScrollLink>
+              </Nav.Link>
+
               <Nav.Link
                 as={Link}
                 to="/infos"
               >
                 Infos
               </Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+
+              <Nav.Link as="span">
+                <NavScrollLink to="contact">Contact</NavScrollLink>
+              </Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

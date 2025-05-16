@@ -12,6 +12,7 @@ import {
   Welcome,
 } from "./index";
 import "./main.css";
+import { ScrollToTopButton } from "./components/button/ScrollToTopButton";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -34,6 +35,7 @@ createRoot(document.getElementById("root")).render(
           element={<Infos />}
         />
       </Routes>
+      <ScrollToTopButton />
       <Footer />
     </Router>
   </StrictMode>

@@ -52,3 +52,38 @@ button:active {
     transform: translateY(-0.1em);
   }
 }
+/* scrollbutton*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-image: url("../../assets/logo_renoptik.jpg");
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+.scroll-to-top .fa-solid {
+  color: black;
+  position: relative;
+  left: 22px;
+  font-size: 30px;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.scroll-to-top:hover {
+  background-color: #0077cc;
+}
