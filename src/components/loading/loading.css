@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Plein écran */
+  height: 100vh;
   width: 100vw;
-  background-color: #e7dcca; /* Fond blanc */
+  background-color: #e7dcca;
 }
 
 .loading img {
@@ -19,11 +19,11 @@
     opacity: 1;
   }
   50% {
-    width: 50vw; /* Devient aussi large que l'écran */
+    width: 50vw;
     opacity: 1;
   }
   100% {
     width: 100vw;
-    opacity: 0; /* Disparaît */
+    opacity: 0;
   }
 }
