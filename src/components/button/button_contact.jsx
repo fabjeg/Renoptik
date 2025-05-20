@@ -9,7 +9,10 @@ export function ButtonContact() {
   };
 
   return (
-    <button onClick={handleClick}>
+    <button
+      className="btn-contact"
+      onClick={handleClick}
+    >
       <div className="svg-wrapper-1">
         <div className="svg-wrapper">
           <svg

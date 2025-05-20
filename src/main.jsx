@@ -6,7 +6,7 @@ import {
   Contact,
   Footer,
   Infos,
-  NavBar,
+  Navbar2,
   PictureComparison,
   Services,
   Welcome,
@@ -17,7 +17,7 @@ import { ScrollToTopButton } from "./components/button/ScrollToTopButton";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
-      <NavBar />
+      <Navbar2 />
       <Routes>
         <Route
           path="/"

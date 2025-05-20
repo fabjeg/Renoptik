@@ -6,12 +6,6 @@
   margin-bottom: 7%;
   gap: 2%;
 }
-.background-title {
-  background: center/cover url(../../assets/car.jpg) no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .container_welcome_description {
   animation: fadeIn 1s ease-in-out;

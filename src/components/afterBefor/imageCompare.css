@@ -42,14 +42,15 @@
 .custom-picture5 {
   height: 106% !important;
 }
-.custom-picture8 {
-  height: 110% !important;
+.custom-picture7 {
+  height: 121% !important;
+  transform: scale(1.5);
 }
 .custom-picture10 {
   height: 130% !important;
 }
 .custom-picture12 {
-  height: 113% !important;
+  height: 153% !important;
 }
 @media (max-width: 900px) {
   .container_compare_picture {

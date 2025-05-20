@@ -4,7 +4,7 @@
   padding-inline: 2%;
 }
 .container_navbar img {
-  width: 5%;
+  width: 10%;
   border-radius: 50%;
   margin: 5px 0 5px 0;
   animation: fadeIn 1s ease-in-out;
@@ -24,8 +24,19 @@
 }
 .navbar a {
   cursor: pointer;
+  white-space: nowrap;
 }
-
+.navbar-nav {
+  align-items: flex-end;
+  margin-right: 1%;
+}
+.logo-renoptik {
+  width: 5%;
+  border-radius: 50%;
+}
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -36,8 +47,8 @@
     transform: scale(1);
   }
 }
-@media (max-width: 450px) {
-  .container_navbar img {
-    width: 20%;
+@media (max-width: 1000px) {
+  .logo-renoptik {
+    width: 15%;
   }
 }

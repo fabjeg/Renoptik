@@ -1,4 +1,4 @@
-button {
+.btn-contact {
   font-family: inherit;
   font-size: 20px;
   background: royalblue;
@@ -15,31 +15,31 @@ button {
   width: 150px;
 }
 
-button span {
+.btn-contact span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
 }
 
-button svg {
+.btn-contact svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
 }
 
-button:hover .svg-wrapper {
+.btn-contact:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
-button:hover svg {
+.btn-contact:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 
-button:hover span {
+.btn-contact:hover span {
   transform: translateX(6em);
 }
 
-button:active {
+.btn-contact:active {
   transform: scale(0.95);
 }
 
@@ -55,12 +55,12 @@ button:active {
 /* scrollbutton*/
 .scroll-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 10px;
+  right: 10px;
   background-image: url("../../assets/logo_renoptik.jpg");
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -69,10 +69,10 @@ button:active {
   transition: background-color 0.3s ease;
 }
 .scroll-to-top .fa-solid {
+  margin-left: 3px;
+  margin-top: 15px;
   color: black;
-  position: relative;
-  left: 22px;
-  font-size: 30px;
+  font-size: 20px;
   animation: bounce 1s infinite;
 }
 @keyframes bounce {

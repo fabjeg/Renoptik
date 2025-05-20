@@ -15,8 +15,6 @@ import picture9 from "../../assets/imageCompareNeuf(9).png";
 import picture10 from "../../assets/imageCompareVieux(8).png";
 import picture11 from "../../assets/imageCompareVieux(11).png";
 import picture12 from "../../assets/imageCompareNeuf(12).png";
-import picture13 from "../../assets/imageCompareNeuf(13).png";
-import picture14 from "../../assets/imageComparevieux(14).png";
 
 const getFileName = (src) => {
   const parts = src.split("/");
@@ -29,10 +27,26 @@ export function PictureComparison() {
     { before: picture3, after: picture4 },
     { before: picture5, after: picture6 },
     { before: picture7, after: picture8 },
-    { before: picture9, after: picture10 },
+    { before: picture10, after: picture9 },
     { before: picture11, after: picture12 },
-    { before: picture13, after: picture14 },
   ];
+  const getCustomClass = (src) => {
+    const fileName = getFileName(src);
+    switch (fileName) {
+      case getFileName(picture4):
+        return "custom-picture4";
+      case getFileName(picture5):
+        return "custom-picture5";
+      case getFileName(picture7):
+        return "custom-picture7";
+      case getFileName(picture10):
+        return "custom-picture10";
+      case getFileName(picture12):
+        return "custom-picture12";
+      default:
+        return "";
+    }
+  };
 
   return (
     <div className="container_compare">
@@ -49,30 +63,14 @@ export function PictureComparison() {
                 <ReactCompareSliderImage
                   src={pict.before}
                   alt="Avant"
-                  className={
-                    getFileName(pict.before) === getFileName(picture5)
-                      ? "custom-picture5"
-                      : ""
-                  }
+                  className={getCustomClass(pict.before)}
                 />
               }
               itemTwo={
                 <ReactCompareSliderImage
                   src={pict.after}
                   alt="Après"
-                  className={
-                    getFileName(pict.after) === getFileName(picture4)
-                      ? "custom-picture4"
-                      : getFileName(pict.after) === getFileName(picture5)
-                      ? "custom-picture5"
-                      : getFileName(pict.after) === getFileName(picture8)
-                      ? "custom-picture8"
-                      : getFileName(pict.after) === getFileName(picture10)
-                      ? "custom-picture10"
-                      : getFileName(pict.after) === getFileName(picture12)
-                      ? "custom-picture12"
-                      : ""
-                  }
+                  className={getCustomClass(pict.after)}
                 />
               }
             />

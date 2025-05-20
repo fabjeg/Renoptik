@@ -7,23 +7,48 @@ import svg3 from "../../assets/logo_svg/road_icon_198842.png";
 
 export function Card() {
   const services = [
-    { logo: svg1, title: "Rénovation de phares", content: "Redonnez éclat et performance à vos phares grâce à notre expertise en restauration et en optimisation." },
-    { logo: svg3, title: "Amélioration de la visibilité", content: "Augmentez votre sécurité sur la route avec des phares parfaitement rénovés." },
-    { logo: svg, title: "Esthétique personnalisée", content: "Ajoutez une touche unique à votre véhicule avec nos designs sur mesure." },
-    { logo: svg2, title: "Durabilité garantie", content: "Nos solutions sont pensées pour durer et garantir une performance optimale sur le long terme" },
+    {
+      logo: svg1,
+      title: "Rénovation de phares",
+      content:
+        "Redonnez éclat et performance à vos phares grâce à notre expertise en restauration et en optimisation.",
+    },
+    {
+      logo: svg3,
+      title: "Amélioration de la visibilité",
+      content:
+        "Bien voir pour être vu, pour la protection de tous, aux yeux de tout le monde. Ce n'est pas que de l’esthétique, c’est aussi de la sécurité.",
+    },
+    {
+      logo: svg,
+      title: "Esthétique",
+      content:
+        "Au-delà de l'aspect sécurité (contrôle technique), une rénovation de phares redonne une fraîcheur à votre véhicule, aux premiers regards, pour une vente par exemple ou pour le plaisir d'un propriétaire soigneux.",
+    },
+    {
+      logo: svg2,
+      title: "Durabilité garantie",
+      content:
+        "Les phares d'une voiture sont en première ligne à être exposés sur la route. Ils subissent les éléments et, de par leur matière, ils ne sont pas éternels. Aucune solution à moindre coût ne tient dans le temps, mais notre travail offre une solution efficace, maîtrisée, au rapport qualité/prix satisfaisant.",
+    },
   ];
 
   return (
     <StyledWrapper>
       <div className="cards-container">
         {services.map((service, index) => (
-          <div key={index} className="card">
+          <div
+            key={index}
+            className="card"
+          >
             <div className="front-content">
-              <img src={service.logo} alt={service.title} />
+              <img
+                src={service.logo}
+                alt={service.title}
+              />
               <p>{service.title}</p>
             </div>
             <div className="content">
-              <p className="heading">{service.title}</p>
               <p>{service.content}</p>
             </div>
           </div>
@@ -58,7 +83,7 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .card .front-content img {
@@ -72,7 +97,7 @@ const StyledWrapper = styled.div`
     font-weight: 700;
     text-align: center;
     color: #333;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .card .content {
@@ -93,7 +118,7 @@ const StyledWrapper = styled.div`
     border-radius: 5px;
     pointer-events: none;
     transform: translateY(100%);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .card .content .heading {
