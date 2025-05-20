@@ -57,8 +57,10 @@ export function App() {
     </div>
   );
 }
+const container = document.getElementById("root");
+const root = createRoot(container);
 
-createRoot(document.getElementById("root")).render(
+root.render(
   <StrictMode>
     <Router>
       <App />

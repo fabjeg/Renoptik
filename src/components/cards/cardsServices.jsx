@@ -29,7 +29,7 @@ export function Card() {
       logo: svg2,
       title: "Durabilité garantie",
       content:
-        "Les phares d'une voiture sont en première ligne à être exposés sur la route. Ils subissent les éléments et, de par leur matière, ils ne sont pas éternels. Aucune solution à moindre coût ne tient dans le temps, mais notre travail offre une solution efficace, maîtrisée, au rapport qualité/prix satisfaisant.",
+        "Les phares d'une voiture sont en première ligne à être exposés sur la route. Ils subissent les éléments et de par leur matière, ils ne sont pas éternels. Aucune solution à moindre coût ne tient dans le temps, mais notre travail offre une solution efficace, maîtrisée, au rapport qualité/prix satisfaisant.",
     },
   ];
 
