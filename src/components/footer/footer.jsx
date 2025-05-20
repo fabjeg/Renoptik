@@ -1,5 +1,5 @@
 import "./footer.css";
-import logo from "../../assets/logo-renoptik.jpg";
+import logo from "../../assets/logo-renoptik.JPG";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export function Footer() {
