@@ -41,6 +41,8 @@ export function PictureComparison() {
         return "custom-picture7";
       case getFileName(picture10):
         return "custom-picture10";
+      case getFileName(picture11):
+        return "custom-picture11";
       case getFileName(picture12):
         return "custom-picture12";
       default:

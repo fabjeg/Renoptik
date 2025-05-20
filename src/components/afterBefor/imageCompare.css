@@ -64,3 +64,21 @@
     margin-bottom: 15%;
   }
 }
+@media (max-width: 630px) {
+  .custom-picture4 {
+    height: 130% !important;
+  }
+  .custom-picture5 {
+    height: 106% !important;
+  }
+  .custom-picture7 {
+    height: 117% !important;
+  }
+  .custom-picture10 {
+    height: 130% !important;
+  }
+  .custom-picture11 {
+    height: 121% !important;
+    transform: scale(1.1);
+  }
+}

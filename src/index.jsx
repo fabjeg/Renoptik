@@ -7,6 +7,7 @@ import { ButtonContact } from "./components/button/button_contact";
 import { Footer } from "./components/footer/footer";
 import { Infos } from "./components/infos/infos";
 import { Navbar2 } from "./components/navabar/navbar2";
+import { Loading } from "./components/loading/loading";
 
 export {
   Navbar2,
@@ -18,4 +19,5 @@ export {
   Contact,
   Footer,
   Infos,
+  Loading,
 };

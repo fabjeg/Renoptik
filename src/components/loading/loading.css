@@ -1,0 +1,29 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Plein écran */
+  width: 100vw;
+  background-color: #e7dcca; /* Fond blanc */
+}
+
+.loading img {
+  width: 50px;
+  animation: growAndDisappear 5s ease-in-out forwards;
+  background-color: #e7dcca;
+}
+
+@keyframes growAndDisappear {
+  0% {
+    width: 100px;
+    opacity: 1;
+  }
+  50% {
+    width: 50vw; /* Devient aussi large que l'écran */
+    opacity: 1;
+  }
+  100% {
+    width: 100vw;
+    opacity: 0; /* Disparaît */
+  }
+}

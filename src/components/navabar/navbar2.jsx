@@ -6,7 +6,7 @@ import {
   CNavbarNav,
   CNavbarToggler,
 } from "@coreui/react";
-import logo from "../../assets/logo_renoptik.jpg";
+import logo from "../../assets/logo-renoptik.jpg";
 import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
 
