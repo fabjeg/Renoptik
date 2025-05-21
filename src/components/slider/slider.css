@@ -40,7 +40,7 @@
 }
 
 .mySwiper2 {
-  width: 37%;
+  width: 37% !important;
 }
 
 .mySwiper {
@@ -63,7 +63,6 @@
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
-  border-radius: 3rem;
 }
 
 .swiper-button-prev,
@@ -71,25 +70,24 @@
   color: black;
 }
 .custom-picture12 {
-  height: 474px !important;
+  height: 4px !important;
+}
+.custom-picture11 {
+  height: 319px !important;
 }
 .custom-picture10 {
   transform: scale(1);
 }
 
-.custom-picture7 {
+/* .custom-picture7 {
   transform: scale(1.2);
   position: relative;
   top: 36px;
-}
+} */
 .custom-picture4 {
   height: 520px !important;
 }
 .custom-picture10 {
   transform: scale(1.2);
   height: 141% !important;
-  border-radius: 3rem !important;
-}
-.custom-picture9 {
-  border-radius: 3rem !important;
 }

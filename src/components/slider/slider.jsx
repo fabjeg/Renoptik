@@ -12,16 +12,12 @@ import {
 } from "react-compare-slider";
 import picture2 from "../../assets/imageCompareVieux.JPG";
 import picture from "../../assets/imageCompareNeuf.JPG";
-import picture3 from "../../assets/imageCompareVieux(1).JPG";
-import picture4 from "../../assets/imageCompareNeuf(2).JPG";
 import picture5 from "../../assets/imageCompareVieux(4).JPG";
 import picture6 from "../../assets/imageCompareNeuf(5).JPG";
 import picture7 from "../../assets/picture/picture.jpg";
 import picture8 from "../../assets/picture/imageCompareNeuf(7).jpg";
 import picture9 from "../../assets/imageCompareNeuf(9).png";
 import picture10 from "../../assets/imageCompareVieux(8).png";
-import picture11 from "../../assets/imageCompareVieux(11).png";
-import picture12 from "../../assets/imageCompareNeuf(12).png";
 import classNames from "classnames";
 
 export function Slider() {
@@ -29,11 +25,9 @@ export function Slider() {
 
   const pictures = [
     { before: picture2, after: picture },
-    { before: picture3, after: picture4 },
     { before: picture5, after: picture6 },
     { before: picture7, after: picture8 },
     { before: picture9, after: picture10 },
-    { before: picture11, after: picture12 },
   ];
   const getFileName = (src) => {
     if (!src) return "";
@@ -44,10 +38,6 @@ export function Slider() {
   const getCustomClass = (src) => {
     const fileName = getFileName(src);
     switch (fileName) {
-      case getFileName(picture3):
-        return "custom-picture3";
-      case getFileName(picture4):
-        return "custom-picture4";
       case getFileName(picture5):
         return "custom-picture5";
       case getFileName(picture7):
@@ -58,10 +48,6 @@ export function Slider() {
         return "custom-picture9";
       case getFileName(picture10):
         return "custom-picture10";
-      case getFileName(picture11):
-        return "custom-picture11";
-      case getFileName(picture12):
-        return "custom-picture12";
       default:
         return "";
     }
