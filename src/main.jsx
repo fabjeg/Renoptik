@@ -8,8 +8,9 @@ import {
   Infos,
   Loading,
   Navbar2,
-  PictureComparison,
+  // PictureComparison,
   Services,
+  Slider,
   Welcome,
 } from "./index";
 import "./main.css";
@@ -40,7 +41,8 @@ export function App() {
                 <>
                   <Welcome />
                   <Services />
-                  <PictureComparison />
+                  {/* <PictureComparison /> */}
+                  <Slider />
                   <Contact />
                 </>
               }
