@@ -26,7 +26,7 @@ export function Slider() {
   const pictures = [
     { before: picture2, after: picture },
     { before: picture5, after: picture6 },
-    { before: picture7, after: picture8 },
+    { before: picture8, after: picture7 },
     { before: picture9, after: picture10 },
   ];
   const getFileName = (src) => {
