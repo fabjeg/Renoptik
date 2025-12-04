@@ -9,6 +9,8 @@ import { Infos } from "./components/infos/infos";
 import { Navbar2 } from "./components/navabar/navbar2";
 import { Loading } from "./components/loading/loading";
 import { Slider } from "./components/slider/slider";
+import { Separator } from "./components/separator/Separator";
+import { Coloris } from "./components/coloris/Coloris";
 
 export {
   Navbar2,
@@ -22,4 +24,6 @@ export {
   Infos,
   Loading,
   Slider,
+  Separator,
+  Coloris,
 };

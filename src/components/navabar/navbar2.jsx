@@ -76,6 +76,13 @@ export const Navbar2 = () => {
               >
                 Infos
               </Link>
+
+              <Link
+                to="/coloris"
+                className="nav-link nav-link-coloris"
+              >
+                <span className="coloris-icon">🎨</span> Coloris
+              </Link>
             </CNavbarNav>
           </CCollapse>
         </CContainer>

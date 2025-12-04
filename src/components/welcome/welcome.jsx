@@ -52,6 +52,8 @@ export function Welcome() {
           />
         </ScrollComponent>
       </div>
+
+
     </div>
   );
 }

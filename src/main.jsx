@@ -12,9 +12,12 @@ import {
   Services,
   Slider,
   Welcome,
+  Separator,
+  Coloris,
 } from "./index";
 import "./main.css";
 import { ScrollToTopButton } from "./components/button/ScrollToTopButton";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,16 +43,24 @@ export function App() {
               element={
                 <>
                   <Welcome />
+                  <Separator variant="wave1" />
                   <Services />
+                  <Separator variant="wave2" flip={true} />
                   {/* <PictureComparison /> */}
                   <Slider />
+                  <Separator variant="curve" />
                   <Contact />
+                  <Separator variant="wave3" flip={true} />
                 </>
               }
             />
             <Route
               path="/infos"
               element={<Infos />}
+            />
+            <Route
+              path="/coloris"
+              element={<Coloris />}
             />
           </Routes>
           <ScrollToTopButton />
@@ -64,8 +75,10 @@ const root = createRoot(container);
 
 root.render(
   <StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <App />
+      </Router>
+    </ThemeProvider>
   </StrictMode>
 );

@@ -1,0 +1,167 @@
+.separator {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.separator-svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.separator-fill {
+  fill: rgba(255, 255, 255, 0.5);
+  transition: fill var(--transition-base);
+}
+
+/* Style par défaut avec dégradé subtle */
+.separator {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+/* Effet de lueur pour les séparateurs */
+.separator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(26, 115, 232, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Variantes de couleurs */
+.separator.separator-primary {
+  color: var(--primary-color);
+}
+
+.separator.separator-secondary {
+  color: var(--secondary-color);
+}
+
+.separator.separator-white {
+  color: var(--white);
+}
+
+.separator.separator-light {
+  color: var(--light);
+}
+
+.separator.separator-gradient-1 {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.separator.separator-gradient-2 {
+  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+
+.separator.separator-gradient-3 {
+  background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
+}
+
+/* Effet de flip pour inverser la forme */
+.separator-flip {
+  transform: rotate(180deg);
+}
+
+/* Animations par défaut */
+.separator-svg {
+  animation: separatorFloat 15s ease-in-out infinite;
+}
+
+@keyframes separatorFloat {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Animation subtle des couleurs */
+.separator-fill {
+  animation: colorShift 10s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Animations optionnelles plus prononcées */
+.separator.separator-animated .separator-svg {
+  animation: separatorWave 8s ease-in-out infinite;
+}
+
+@keyframes separatorWave {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-8px) scale(1.01);
+  }
+}
+
+/* Variantes de hauteur */
+.separator.separator-sm .separator-svg {
+  height: 50px;
+}
+
+.separator.separator-md .separator-svg {
+  height: 80px;
+}
+
+.separator.separator-lg .separator-svg {
+  height: 120px;
+}
+
+.separator.separator-xl .separator-svg {
+  height: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .separator-svg {
+    height: 60px;
+  }
+
+  .separator.separator-lg .separator-svg,
+  .separator.separator-xl .separator-svg {
+    height: 80px;
+  }
+}
+
+/* Effet de dégradé pour certaines formes */
+.separator.separator-with-gradient .separator-fill {
+  fill: url(#gradient);
+}
+
+/* Ombres pour donner de la profondeur */
+.separator.separator-shadow {
+  filter: drop-shadow(0 -5px 15px rgba(0, 0, 0, 0.1));
+}

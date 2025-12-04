@@ -60,20 +60,45 @@ export function Card() {
 
 const StyledWrapper = styled.div`
   .cards-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .card {
-    width: 250px;
-    height: 300px;
     position: relative;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
     overflow: hidden;
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    transition: all var(--transition-base);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    min-height: 340px;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+  }
+
+  .card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(26, 115, 232, 0.2);
   }
 
   .card .front-content {
@@ -83,21 +108,30 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 2rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    z-index: 2;
   }
 
   .card .front-content img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: all var(--transition-base);
+  }
+
+  .card:hover .front-content img {
+    transform: scale(1.1);
   }
 
   .card .front-content p {
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: 700;
     text-align: center;
-    color: #333;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    color: var(--text-primary);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .card .content {
@@ -111,30 +145,50 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
-    background: #e7dcca;
-    color: black;
-    line-height: 1.5;
-    border-radius: 5px;
+    padding: 2rem;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.95), rgba(245, 158, 11, 0.95));
+    color: white;
+    line-height: 1.6;
+    border-radius: var(--radius-xl);
     pointer-events: none;
-    transform: translateY(100%);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 3;
+  }
+
+  .card .content p {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
   }
 
   .card .content .heading {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
+    color: white;
   }
 
   .card:hover .content {
+    opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
   }
 
   .card:hover .front-content {
-    transform: translateY(-30%);
+    opacity: 0;
+    transform: translateY(-20px);
   }
 
-  .card:hover .front-content p {
-    opacity: 0;
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      min-height: 300px;
+    }
   }
 `;

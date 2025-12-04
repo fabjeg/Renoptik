@@ -1,30 +1,56 @@
 .btn-contact {
   font-family: inherit;
-  font-size: 20px;
-  background: royalblue;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   color: white;
-  padding: 0.7em 1em;
-  padding-left: 0.9em;
-  display: flex;
+  padding: 1rem 2rem;
+  display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
   border: none;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: all 0.2s;
+  transition: all var(--transition-base);
   cursor: pointer;
-  width: 150px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: -1;
+}
+
+.btn-contact:hover::before {
+  opacity: 1;
 }
 
 .btn-contact span {
   display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
+  transition: all var(--transition-base);
+  z-index: 1;
 }
 
 .btn-contact svg {
   display: block;
   transform-origin: center center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--transition-base);
+  z-index: 1;
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
 }
 
 .btn-contact:hover .svg-wrapper {
@@ -32,58 +58,82 @@
 }
 
 .btn-contact:hover svg {
-  transform: translateX(1.2em) rotate(45deg) scale(1.1);
-}
-
-.btn-contact:hover span {
-  transform: translateX(6em);
+  transform: translateX(5px) rotate(45deg);
 }
 
 .btn-contact:active {
-  transform: scale(0.95);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 @keyframes fly-1 {
   from {
-    transform: translateY(0.1em);
+    transform: translateY(1px);
   }
-
   to {
-    transform: translateY(-0.1em);
+    transform: translateY(-1px);
   }
 }
 /* scrollbutton*/
 .scroll-to-top {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 2rem;
+  right: 2rem;
   background-image: url("../../assets/logo-renoptik.JPG");
   background-size: cover;
-  width: 70px;
-  height: 70px;
-  border: none;
+  width: 64px;
+  height: 64px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-xl);
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
 }
+
+.scroll-to-top::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.scroll-to-top:hover::before {
+  opacity: 1;
+}
+
 .scroll-to-top .fa-solid {
-  margin-left: 5px;
-  margin-top: 15px;
-  color: black;
-  font-size: 20px;
-  animation: bounce 1s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  animation: bounce 1.5s infinite;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 @keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translate(-50%, -50%) translateY(-6px);
   }
 }
+
 .scroll-to-top:hover {
-  background-color: #0077cc;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow:
+    var(--shadow-xl),
+    0 0 20px rgba(26, 115, 232, 0.4);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px) scale(1.02);
 }
