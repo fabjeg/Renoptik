@@ -27,12 +27,12 @@ export function ButtonContact() {
             />
             <path
               fill="currentColor"
-              d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+              d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"
             />
           </svg>
         </div>
       </div>
-      <span>Contact</span>
+      <span>Prendre rendez-vous</span>
     </button>
   );
 }

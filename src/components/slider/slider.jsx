@@ -72,6 +72,8 @@ export function Slider() {
           {pictures.map((pict, index) => (
             <SwiperSlide key={index}>
               <ReactCompareSlider
+                boundsPadding={0}
+                changePositionOnHover={false}
                 itemOne={
                   <ReactCompareSliderImage
                     className={classNames(getCustomClass(pict.before))}

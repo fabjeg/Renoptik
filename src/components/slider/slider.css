@@ -62,6 +62,35 @@
   overflow: hidden;
 }
 
+/* Fix pour le ReactCompareSlider - assurer que le handle suit la ligne */
+.mySwiper2 .swiper-slide [data-rcs="root"] {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.mySwiper2 .swiper-slide [data-rcs="item-first"],
+.mySwiper2 .swiper-slide [data-rcs="item-second"] {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.mySwiper2 .swiper-slide [data-rcs="item-first"] img,
+.mySwiper2 .swiper-slide [data-rcs="item-second"] img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.mySwiper2 .swiper-slide [data-rcs="handle-container"] {
+  z-index: 10;
+}
+
 @media (max-width: 768px) {
   .mySwiper2 {
     width: 90% !important;
